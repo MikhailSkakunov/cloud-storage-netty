@@ -58,8 +58,8 @@ public class MainController implements Initializable {
     @FXML
     public CheckMenuItem rememberMeMenuItem;
     private static final int BUFFER_SIZE = 8192;
-    private static final String WARN_RESOURCE = "com/geekbrains/client/warn.css";
-    private static final String INFO_RESOURCE = "com/geekbrains/client/info.css";
+    private static final String WARN_RESOURCE = "com.geekbrains.client/warn.css";
+    private static final String INFO_RESOURCE = "com.geekbrains.client/info.css";
     private static final String RECONNECT_STRING = "SERVER: OFF. Reconnect?";
     private static final String NEW_USER = "New user";
     private Network network;

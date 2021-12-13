@@ -8,7 +8,7 @@ import java.util.List;
 
 @Slf4j
 public class DBService {
-    private static final String DB_URL = "jdbc:sqlite:user_data.db";
+    private static final String DB_URL = "jdbc:sqlite:C:\\Users\\skak8\\Documents\\SQLiteStudio\\user_data.db";
     private static final String ADD_USER_REQUEST = "INSERT INTO accounts(username, login, password) VALUES(?, ?, ?)";
     private static final String GET_USERNAMES_REQUEST = "SELECT username FROM accounts";
     private static final String GET_LOGIN_AND_PASS_REQUEST = "SELECT login, password FROM accounts WHERE username = ?";

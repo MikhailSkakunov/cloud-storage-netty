@@ -11,9 +11,9 @@ import java.io.IOException;
 
 public class App extends Application {
     public static App INSTANCE;
-    private static final String MAIN_FXML = "main.fxml";
-    private static final String AUTH_FXML = "auth.fxml";
-    private static final String REG_FXML = "reg.fxml";
+    private static final String MAIN_FXML = "/com.geekbrains.client/main.fxml";
+    private static final String AUTH_FXML = "/com.geekbrains.client/auth.fxml";
+    private static final String REG_FXML = "/com.geekbrains.client/reg.fxml";
     private Stage primaryStage;
     private Stage authStage;
     private Stage regStage;
@@ -43,7 +43,7 @@ public class App extends Application {
         mainLoader.setLocation(getClass().getResource(MAIN_FXML));
         Parent root = mainLoader.load();
         this.primaryStage.setScene(new Scene(root));
-        primaryStage.getScene().getStylesheets().add("com/geekbrains/client/sky.css");
+        primaryStage.getScene().getStylesheets().add("com.geekbrains.client/sky.css");
         primaryStage.setOnCloseRequest(we -> {
             Network.getInstance().close();
             getMainController().getDs().closeConnection();
@@ -59,7 +59,7 @@ public class App extends Application {
         authStage.initOwner(primaryStage);
         authStage.initModality(Modality.WINDOW_MODAL);
         authStage.setScene(new Scene(root));
-        authStage.getScene().getStylesheets().add("com/geekbrains/client/sky.css");
+        authStage.getScene().getStylesheets().add("com.geekbrains.client/sky.css");
         authStage.setResizable(false);
         getAuthController().loginFocus();  // фокус на поле логина (для удобства)
     }
@@ -72,7 +72,7 @@ public class App extends Application {
         regStage.initOwner(authStage);
         regStage.initModality(Modality.WINDOW_MODAL);
         regStage.setScene(new Scene(root));
-        regStage.getScene().getStylesheets().add("com/geekbrains/client/sky.css");
+        regStage.getScene().getStylesheets().add("com.geekbrains.client/sky.css");
         regStage.setResizable(false);
         getRegController().nickFocus(); // фокус на поле имени (для удобства)
     }
